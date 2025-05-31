@@ -31,39 +31,127 @@ $r$ is called the \textit{rate of change} of the linear function. You can see th
 
 Using the applet, answer the following questions about the function $y=\sin(\theta)$:
 
-\begin{enumerate}
-    \item What is the value of $y$ when $\theta=0$? 
+\begin{question}
+    \begin{prompt} 
+    What is the value of $y$ when $\theta=0$? 
     \begin{multipleChoice}
         \choice[correct]{0}
         \choice{1}
         \choice{$\pi$}
         \choice{-1}
     \end{multipleChoice}
-    \item Select all that are true about the linear approximation $L$ of the function $y=\sin(\theta)$ at the point $(0,0)$.
+    \begin{feedback}
+        Be sure to look at the height of the graph at the point where $\theta=0$. You can also (in a calculator or in MATLAB) compute the value of $\sin(0)$ to check your answer. Both reveal $y=0$.
+    \end{feedback}
+    \end{prompt}
+\end{question}
+ 
+\begin{question}
+    \begin{prompt}
+        Select all that are true about the linear approximation $L$ of the function $y=\sin(\theta)$ at the point $(0,0)$.
     \begin{selectAll}
         \choice[correct]{The rate of change of $L$ is $1$.}
         \choice[correct]{The rate $\frac{dy}{d\theta}$ is $1$.}
         \choice{The rate $r=-1$.}
-        \choice[correct]{$dy=1\cdot d\theta$.}
+        \choice[correct]{If $d\theta=.01$, then $dy=0.01$.}
+        \choice{If $d\theta=.01$, then $dy=0.03$.}
+        \choice{Since $\theta=0$ and $L$ is linear with rate $r=1$, then $y=r\cdot\theta=0$.}
         \choice[correct]{$L$ is a linear function.}
         \choice{$L$ is not a linear function.}
         \choice{$L$ at $(0,0)$ is the same as $L$ at $(\pi/2,1)$.}
         \choice{$L$ at $(0,0)$ is the same as $L$ at $(\pi/4,\sqrt{2}/2)$.}
-        \choice[correct]{$L$ at $(0,0)$ is the same as $L$ at $(\pi,0)$.}
         \choice{$\frac{dy}{d\theta}$ at $(0,0)$ is the same as $\frac{dy}{d\theta}$ at $(\pi/2,1)$.}
     \end{selectAll}
-    \item Which of hte following are true about the function $y=\sin(\theta)$?
-\end{enumerate}
+    \begin{feedback}
+        The appletshows that the linear approximation $L$ (when $\theta=0$) has a rate of change $r=1$. Since $r$ determines the rate of change, then for any value of $d\theta$, we get $dy=1\cdot d\theta$. Hence, we also get $\frac{dy}{d\theta}=1$.Also, if $d\theta=.01$, then $dy=1\cdot .01=0.01$.
 
+        It is NOT true that since $\theta=0$ and $L$ is linear with rate $r=1$, then $y=r\cdot\theta=0$. $y=0$ because $\sin(0)$ \emph{happens} to be $0$, the linear approximation doesn't control the values of $y$ and $\theta$ directly, just their \emph{changes} $dy$ and $d\theta$.
 
-\begin{exercise}
-    $2+3=\answer{5}$
-\end{exercise}
+        If you compare $L$ at $(0,0)$ to $L$ at $(\pi/2,1)$, you will see that they have different rates of change, so they are not the same. For two lines to be the same, they must have the same output values for every input value. Two lines with different rates of change will necessarily not have the same output values for every input value.
+    \end{feedback}
+    \end{prompt}
+\end{question}
+\begin{question}
+    \begin{prompt}
+        Which of the following are true about the function $y=\sin(\theta)$?
+    \begin{selectAll}
+        \choice[correct]{The function $y=\sin(\theta)$ is not linear.}
+        \choice{The function $y=\sin(\theta)$ is linear.}
+        \choice[correct]{The function $y=\sin(\theta)$ has a linear approximation at $\theta=\frac{pi}{2}$ with a rate of change of $r=0$.}
+        \choice{The function $y=\sin(\theta)$ has no linear approximations at any $\theta$.}
+        \choice{If $L$ is a linear approximation of $y=\sin(\theta)$ at $(\theta,y)$ with a rate $r$, then for that linear approximation it is true that $y=r\cdot \theta$.}
+        \choice[correct]{If $L$ is a linear approximation of $y=\sin(\theta)$ at $(\theta,y)$ with a rate $r$, then for that linear approximation it is true that $dy=r\cdot d\theta$.}
+    \end{selectAll}
+    \begin{feedback}
+        The function $y=\sin(\theta)$ is not linear because there is no single rate of change $r$ that determines the graph of $\sin(\theta)$ by the equation $dy=r\cdot d\theta$. \emph{However} $\sin(\theta)$ \emph{does} have linear approximations at all of the points along its graph. This makes it a really nice function from a calculus perspective.
+        
+        If you use the applet to find the linear approximation at $\theta=\frac{\pi}{2}$, you'll notice that $r=0$. This means that no matter the change $d\theta$, $y$ will not change at all (meaning $dy=0$). 
+        
+        It is really important to note that $y=r\cdot \theta$ and $dy=r\cdot d\theta$ are saying different things. $y=r\cdot \theta$ is saying that the output value $y$ is determined by the input value $\theta$ and the rate $r$. This would \emph{only} be true if the linear function crossed through $(0,0)$, which many do not. However, \emph{all} linear functions satisfy the \emph{rate of change equation} $dy=r\cdot d\theta$. This says that the \emph{changes} to $y$ and $\theta$ are related by $r$. 
+    \end{feedback}
+    \end{prompt}
+\end{question}
 
-\begin{center} %% Image is found in xmPictures
-\includegraphics{missionPatch.jpg}
-\end{center}
+\begin{remark}
+    Some of the true/false statements in the previous exercise were stated for specific $(\theta,y)$ pairs, and others were stated more generally. Also, some statemetns were about specific linear approximations $L$ while others were asking about all possible linear approximations of the function $y=\sin(\theta)$.
 
+    Common to calculus (and math) will be a need to interpret mathematical statements both specifically and generally, and the statements might be stated in similar ways.
 
+    For instance, the statement "The linear approximation $L$ of $\sin(\theta)$ at $(\theta,y)$ has a rate of change $r$" is a general statement about all linear approximations of $\sin(\theta)$. The statement "The linear approximation $L$ of $\sin(\theta)$ at $(0,0)$ has a rate of change $r=1$" is a specific statement about the linear approximation at the point $(0,0)$.
+
+    Being able to fluidly interpret mathematical statements both in specific and general contexts will be very important.
+\end{remark}
+
+\section{Not all functions are locally linear}
+Throughout calculus (and, again, in math) you will see many statements making claims about what is true. These are often called \emph{theorems} or \emph{propositions} or \emph{lemmas}. 
+
+These statements tend to be of the form ``If [Conditions] then [Conclusion]''. You want to pay special attention to the conditions, because often they help you accurately know when to apply the theorem. 
+
+For instance, let's unpack whether the statement ``If $f$ is a function, then $f$ is locally linear'' is true or false. Our Condition here is that $f$ is a function, and our Conclusion is that $f$ is locally linear.
+
+\begin{question}
+
+Using the following GeoGebra applet, explore each function $f$ and determine whether it is locally linear. You can select the function in question by using the check boxes in the top left corner. The graph of the function is given on the left screen, and then the zoom window is given on the right screen. You can use the slider at the bottom of the left screen to control how big the zoom window is. Remember that for a function to be locally linear, if you zoom in close enough around any point, the graph should look like a line.
+
+% \begin{center}
+%     \geogebra{localLinearity2}
+% \end{center}
+
+%ONCE THE APPLET IS FINALIZED, ADJUST THE FUNCTION NAMES AS NECESSARY
+\begin{prompt}
+Select all of the functions that are locally linear.
+\begin{selectAll}
+    \choice[correct]{The function $f$ is locally linear.}
+    \choice{The function $g$ is locally linear.}
+    \choice[correct]{The function $h$ is locally linear.}
+    \choice{The function $j$ is locally linear.}
+    \choice[correct]{The function $k$ is locally linear.}
+\end{selectAll}
+\begin{feedback}
+    The functions $f$, $g$, ... are all locally linear (at least within the applet domain). As you both shrunk the window and moved the point along the graph, you should have seen that within the window the graph basically looked linear. 
+
+    For functions $h$ and $k$, however, there were particular points where no matter the zoom scale the graph did not look linear. $h$ had a single point that was a sharp corner, and in every possible zoom window the sharpness of the corner kept the graph from looking linear. $k$ was quite strange! It roughly resembled a bouncing curve, but as you zoomed in the shape continued to look the same (a bouncing curve). For this particular function, it looks the same at all scales and hence is not linear!
+\end{feedback}
+\end{prompt}
+\end{question}
+
+The previous question found that the claim ``If $f$ is a function, then $f$ is locally linear'' is \textbf{false}, since there were some functions that were not locally linear.
+
+From our first example, however, the claim ``At all values of $\theta$, the sine function is locally linear'' is \textbf{true}. We can state this as a theorem, again noting the conditions and the claim. 
+
+\begin{theorem}
+    If $f$ is the sine function and $\theta$ is a real number, then $f$ is locally linear at $\theta$. 
+
+    In other words, at each $\theta$ there is a linear approximation $L$ of $f$ at $(\theta, f(\theta))$ with a rate of change $r$. 
+\end{theorem}
+
+\begin{remark}
+    The conditions for the theorem are that $\theta$ is any real number, and that $f$ is specifically the sine function. The conclusion is that $f$ is locally linear at $\theta$. 
+\end{remark}
+
+\section{Conclusion}
+In this lesson we introduced two core ideas of calculus: approximation and local linearity. We noted that while some functions have linear approximations at certain input values, others do not. 
+
+We will build on these ideas further to explore \emph{which} functions have good linear approximations, what it means to be a linear approximation, and how we can more precisely find the rates of change of locally linear functions. 
 
 \end{document}
